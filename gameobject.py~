@@ -1,0 +1,19 @@
+import pygame, os, random
+
+class GameObject:
+    def __init__ (self, image, x, y, smart=False):
+        self.image = pygame.image.load(os.path.join(image))
+        self.image.convert()
+        self.x = x
+        self.y = y
+        self.smart = smart
+    
+
+    def display(self, screen, x, y):
+        screen.blit(self.image, (x, y))
+
+    def update(self):
+        if self.smart:
+            if random.randint(1, 500) == 30:
+                self.x += random.choice([32, -32])
+    
