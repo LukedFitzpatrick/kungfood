@@ -1,2 +1,2 @@
-# secure
-Game about security cameras
+# Kungfood 
+Game about kung fu and food.
