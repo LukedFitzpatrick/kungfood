@@ -2,9 +2,9 @@ from pygame.locals import *
 import pygame
 
 SCREEN_WIDTH = 512
-SCREEN_HEIGHT = 384
+SCREEN_HEIGHT = 256
 GAME_WIDTH = 512
-GAME_HEIGHT = 384
+GAME_HEIGHT = 256
 
 NORMAL_FPS = 60
 
@@ -25,7 +25,7 @@ PUNCH = 3
 BLOCK = 4
 CROUCH = 5
 
-JUMPV = -20
+JUMPV = -15
 GRAVITY = 1
 FRUIT_GRAVITY = 0.5
 FRUIT_FRICTION = 0.05
@@ -37,15 +37,14 @@ KICK_FRAMES = 10
 
 LEFT_K = pygame.K_a
 RIGHT_K = pygame.K_d
-CROUCH_K = pygame.K_s
 JUMP_K = pygame.K_w
 
-PUNCH_K = pygame.K_j
-KICK_K = pygame.K_k
-BLOCK_K = pygame.K_SPACE
+
+KICK_K = pygame.K_SPACE
+
 
 DISPLAY_HITBOXES = False
 
 BULLET_TIME_COUNTDOWN = 30
-BULLET_TIME_FPS = 60
+BULLET_TIME_FPS = 40
 BULLET_TIME_SCREENSHAKE = 2

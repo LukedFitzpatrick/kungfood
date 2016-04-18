@@ -31,14 +31,17 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 
 objects = []
-for x in range(0, GAME_WIDTH/32):
-    for y in range(0, GAME_HEIGHT/32):
-       tile = GameObject("backtile.png", x*32, y*32, 0, 0)
-       objects.append(tile)
+#for x in range(0, GAME_WIDTH/32):
+#    for y in range(0, GAME_HEIGHT/32):
+#       tile = GameObject("backtile.png", x*32, y*32, 0, 0)
+#       objects.append(tile)
+
+tile = GameObject("dojo.png", 0, 0, 0, 0)
+objects.append(tile)
 
 longwalk = []
-for i in range(0, 5): longwalk.append("walk1.png")
-for i in range(0, 5): longwalk.append("walk2.png")
+for i in range(0, 5): longwalk.append("newwalk1.png")
+for i in range(0, 5): longwalk.append("newwalk2.png")
 man = PlayerObject(longwalk, ["kick1.png"],
                ["punch1.png"], ["block1.png"], ["crouch1.png"], 
                ["jump1.png"])
@@ -88,14 +91,6 @@ while mainloop:
 
    if pygame.K_ESCAPE in keysdown:
       mainloop = False
-   elif CROUCH_K in keysdown:
-      man.crouch()
-   elif BLOCK_K in keysdown:
-      man.block()
-   elif PUNCH_K in keysdown:
-      man.punch()
-      if not pygame.mixer.get_busy():
-          random.choice(hutSounds).play()
    elif KICK_K in keysdown:
       man.kick()
       if not pygame.mixer.get_busy():
